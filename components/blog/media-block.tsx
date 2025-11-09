@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Caption } from "lucide-react";
+import { FileText } from "lucide-react";
 
 interface MediaBlockProps {
   src: string;
@@ -34,7 +34,7 @@ export function MediaBlock({ src, alt, caption, width, height }: MediaBlockProps
       </div>
       {caption && (
         <figcaption className="mt-3 text-sm text-black/60 flex items-start gap-2">
-          <Caption className="w-4 h-4 mt-0.5 flex-shrink-0" />
+          <FileText className="w-4 h-4 mt-0.5 flex-shrink-0" />
           <span>{caption}</span>
         </figcaption>
       )}
