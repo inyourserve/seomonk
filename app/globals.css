@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 212 100% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 0%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 50%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 212 100% 42%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-black;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .prose {
+    @apply text-black/70 leading-relaxed;
+  }
+  .prose h1 {
+    @apply text-3xl font-bold text-black mb-4 mt-8;
+  }
+  .prose h2 {
+    @apply text-2xl font-bold text-black mb-3 mt-6;
+  }
+  .prose h3 {
+    @apply text-xl font-semibold text-black mb-2 mt-4;
+  }
+  .prose p {
+    @apply mb-4;
+  }
+  .prose ul, .prose ol {
+    @apply mb-4 ml-6;
+  }
+  .prose ul {
+    @apply list-disc;
+  }
+  .prose ol {
+    @apply list-decimal;
+  }
+  .prose li {
+    @apply mb-2;
+  }
+  .prose a {
+    @apply text-primary underline;
+  }
+  .prose code {
+    @apply bg-black/5 px-2 py-1 rounded text-sm font-mono;
+  }
+  .prose pre {
+    @apply bg-black/5 p-4 rounded mb-4 overflow-x-auto;
+  }
+  .prose blockquote {
+    @apply border-l-4 border-primary pl-4 italic my-4;
+  }
+  .prose img {
+    @apply rounded-lg my-4;
+  }
+}
+
